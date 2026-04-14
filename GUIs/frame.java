@@ -3,10 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Advanced GUI Application with Gradient Background and Event Handling
- * Features: Clean architecture, proper component separation, and robust event handling
- */
 public class NewFrame extends JFrame {
     private JButton mainButton;
     private JPanel gradientPanel;
@@ -18,9 +14,7 @@ public class NewFrame extends JFrame {
         finalizeFrame();
     }
     
-    /**
-     * Initialize frame properties
-     */
+    
     private void initializeFrame() {
         setTitle("Advanced GUI Application");
         setSize(500, 500);
@@ -29,9 +23,7 @@ public class NewFrame extends JFrame {
         setResizable(true);
     }
     
-    /**
-     * Create and setup the gradient background panel
-     */
+    
     private void setupGradientPanel() {
         gradientPanel = new JPanel() {
             @Override
@@ -52,9 +44,7 @@ public class NewFrame extends JFrame {
         add(gradientPanel);
     }
     
-    /**
-     * Setup the main interactive button
-     */
+    
     private void setupMainButton() {
         mainButton = new JButton("CLICK ME");
         mainButton.setFont(new Font("Arial", Font.BOLD, 16));
@@ -69,9 +59,7 @@ public class NewFrame extends JFrame {
         gradientPanel.add(buttonPanel, BorderLayout.CENTER);
     }
     
-    /**
-     * Finalize frame display
-     */
+    
     private void finalizeFrame() {
         setVisible(true);
     }
@@ -86,9 +74,7 @@ public class NewFrame extends JFrame {
         }
     }
     
-    /**
-     * Create a new detail window when button is clicked
-     */
+    
     private void createDetailWindow() {
         JFrame detailFrame = new JFrame("Detail Window");
         detailFrame.setSize(400, 300);
@@ -100,9 +86,7 @@ public class NewFrame extends JFrame {
         detailFrame.setVisible(true);
     }
     
-    /**
-     * Create a styled label with custom formatting
-     */
+    
     private JLabel createStyledLabel() {
         JLabel label = new JLabel("Welcome to Advanced GUI!");
         label.setHorizontalAlignment(JLabel.CENTER);
@@ -115,9 +99,7 @@ public class NewFrame extends JFrame {
     }
 }
 
-/**
- * Main entry point for the application
- */
+
 public class frame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new NewFrame());
